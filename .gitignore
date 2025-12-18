@@ -1,0 +1,159 @@
+# Derlenmiş Python dosyaları (bunlar her çalıştırmada yeniden oluşuyor)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C uzantıları
+*.so
+
+# Paketleme ve dağıtım dosyaları
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller ile oluşturulan dosyalar
+*.manifest
+*.spec
+
+# Kurulum logları
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test ve kod kapsama raporları
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Çeviri dosyaları
+*.mo
+*.pot
+
+# Django ile ilgili dosyalar
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask ile ilgili dosyalar
+instance/
+.webassets-cache
+
+# Scrapy ile ilgili dosyalar
+.scrapy
+
+# Sphinx dokümantasyonu
+docs/_build/
+
+# PyBuilder dosyaları
+.pybuilder/
+target/
+
+# Jupyter Notebook geçici dosyaları
+.ipynb_checkpoints
+
+# IPython ayarları
+profile_default/
+ipython_config.py
+
+# pyenv sürüm dosyası
+.python-version
+
+# pipenv kilit dosyası
+Pipfile.lock
+
+# poetry kilit dosyası
+poetry.lock
+
+# pdm dosyaları
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+# PEP 582 yerel paketler
+__pypackages__/
+
+# Celery zamanlanmış görev dosyaları
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath ayrıştırılmış dosyalar
+*.sage.py
+
+# Sanal ortamlar (bunları repo'ya dahil etmiyoruz)
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder proje ayarları
+.spyderproject
+.spyproject
+
+# Rope proje ayarları
+.ropeproject
+
+# mkdocs dokümantasyonu
+/site
+
+# mypy tip kontrolü önbelleği
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre tip kontrolü dosyaları
+.pyre/
+
+# pytype statik analiz dosyaları
+.pytype/
+
+# Cython debug sembolleri
+cython_debug/
+
+# IDE ve editör ayarları (herkesin kendi ayarları farklı)
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# macOS sistem dosyaları (bunlar gereksiz yere repo'yu kirletiyor)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows küçük resim önbelleği
+Thumbs.db
+ehthumbs.db
+
+# Projeye özel geçici dosyalar
+*.bak
+*.tmp
+*.temp
