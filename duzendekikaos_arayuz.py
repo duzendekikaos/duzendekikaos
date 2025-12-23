@@ -1,17 +1,17 @@
 """
-Düzendeki Kaos - Şifreleme Sistemi
+Düzen İçinde Kaos - Şifreleme Modülü
 Streamlit arayüzü (localhostta çalışıyor)
 """
 
 import streamlit as st
-from duzendekikaos_binary import (
+from duzenicindekaos_binary import (
     text_to_binary, binary_to_text, get_full_binary_string,char_to_binary,
     ALL_CHARACTERS,UPPERCASE_DATA,LOWERCASE_DATA,DIGIT_DATA,SPECIAL_DATA
 )
 
 #sayfa ayarları
 st.set_page_config(
-    page_title="Şifreleme Sistemi - Düzendeki Kaos",page_icon="🔐",
+    page_title="Şifreleme Modülü : Düzen İçinde Kaos",page_icon="🔐",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -142,8 +142,8 @@ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);letter-spacing: 1px;}
 st.markdown("""
 <div class="main-header">
     <div class="header-content">
-        <h1> Şifreleme Sistemi - Düzendeki Kaos</h1>
-        <p>40-bit binary şifreleme</p>
+        <h1> Şifreleme Modülü : Düzen İçinde Kaos</h1>
+        <p>40-bit binary şifreleme modülü</p>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -162,17 +162,17 @@ with st.sidebar:
     """)
     
     st.markdown("---")
-    st.markdown("### ℹ️ Şifreleme Sistemi Nasıl Çalışır?")
+    st.markdown("### ℹ️ Şifreleme Modülümüz Nasıl Çalışır?")
     st.markdown("""
     1. Her karakter Pi sayısından bir kesit ile eşleştirilir.
-    2. Bu kesit 40-bit binary'ye dönüştürülür.
-    3. Şifreleme ve çözme işlemleri bu tabloya göre yapılır.
+    2. Bu kesit 40-bit binary'e tamamlanır.
+    3. Şifreleme ve çözme işlemleri bu kesitlere göre yapılır.
     """)
 
 # sekmeler(ana)
 tab1, tab2, tab3, tab4 = st.tabs(["🔐 Şifrele", "🔓 Çöz", "📋 Karakter Tablosu", "🔍 Tek Karakter"])
 
-# bölüm 1: Şifreleme
+# bölüm 1: Şifreleme (girilen metin, binary'e dönüşecek.)
 with tab1:
     st.markdown("### 📝 Metin → Binary Dönüştürme")
     
@@ -230,7 +230,7 @@ with tab1:
     elif encrypt_btn:
         st.warning("⚠️ Lütfen şifrelenecek metin girin!")
 
-# bölüm 2: Çözüm kısmı
+# bölüm 2: Çözüm kısmı (binary, metine dönüşecek)
 with tab2:
     st.markdown("### 🔓 Binary → Metin Çözme")
     
@@ -272,7 +272,7 @@ with tab2:
     elif decrypt_btn:
         st.warning("⚠️ Lütfen çözülecek binary girin!")
 
-# bölüm3: Karakter Tablosu
+# bölüm3: Karakter Tablosu (buradan tüm karakterlerin pi kesiti ve binary karşılıklarını görebileceğiz.)
 with tab3:
     st.markdown("### 📋 Tüm Karakter Tablosu")
     
@@ -292,7 +292,7 @@ with tab3:
     else:
         data = ALL_CHARACTERS
     
-    # Tablo oluştur
+    # Tablo oluşturma kısmı
     table_data = []
     for char, (pi_seg, binary) in data.items():
         display_char = "BOŞLUK" if char == " " else char
@@ -310,7 +310,7 @@ with tab3:
     
     st.info(f"📊 Toplam {len(data)} karakter gösteriliyor.")
 
-# TAB 4: Tek Karakter Sorgulama
+# TAB 4: Tek Karakter Sorgulama (tek karakterin pi kesiti ve binary karşılığını görebileceğiz. enter ile çalışır)
 with tab4:
     st.markdown("### 🔍 Tek Karakter Sorgulama")
     
@@ -330,7 +330,7 @@ with tab4:
             col1, col2 = st.columns(2)
             
             with col1:
-                st.markdown("#### 🥧 Pi Kesiti")
+                st.markdown("#### π Kesiti")
                 st.markdown(f"""
                 <div style="background: #f0f2f6;padding: 1.5rem;border-radius: 10px; 
                             font-family: monospace; font-size: 1.5rem; text-align: center;">
@@ -339,7 +339,7 @@ with tab4:
                 """, unsafe_allow_html=True)
             
             with col2:
-                st.markdown("#### 💻 40-Bit Binary")
+                st.markdown("#### 💻 40-Bit Binary Karşılığı")
                 st.markdown(f"""
                 <div style="background: #1a1a2e; padding: 1.5rem; border-radius: 10px; 
                             font-family: monospace; font-size: 1rem; text-align: center; color: #e94560;">
@@ -348,7 +348,7 @@ with tab4:
                 """, unsafe_allow_html=True)
             
             # Binary görselleştirme
-            st.markdown("#### 📊 Binary Görselleştirme")
+            st.markdown("#### 📊 Binary Görselleştirme (8-bitlik)")
             binary_visual = " ".join([binary[i:i+8] for i in range(0, len(binary), 8)])
             st.code(binary_visual)
             
@@ -372,7 +372,7 @@ with tab4:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #888; padding: 1rem;">
-    🔢 Şifreleme Sistemi- Düzendeki Kaos | 40-Bit Binary Kodlama | Türkçe Karakter Desteği
+    🔢 Şifreleme Modülü: Düzen İçinde Kaos | 40-Bit Binary Kodlama | 
 </div>
 """, unsafe_allow_html=True)
 
