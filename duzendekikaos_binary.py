@@ -1,4 +1,6 @@
+# Düzen İçinde Kaos Projesi Binary Veri ve Hesaplama Dosyası
 from typing import List, Dict, Tuple
+
 
 
 UPPERCASE_DATA = {
@@ -252,17 +254,16 @@ def display_character_table():
         print(f"   {display_char:<6}  →  Pi: {pi_seg:<12}  Binary: {binary}")
 
 
-# ANA MENÜ
+# ana menü (bu kısım terminalde gösterilir)
 
 def interactive_menu():
     """Ana menü"""
     
     print("\n" + "="*75)
-    print("🔢 Pİ SAYISINDAKİ GİZLİ BİLGİLER - ŞİFRELEME SİSTEMİ")
+    print("🔢 40-Bit Binary Şifreleme Modülü - Düzen İçinde Kaos")
     print("="*75)
     print("""
-Bu program, Pi sayısının rakamlarını kullanarak gelişmiş bir
-şifreleme algoritması sunar. Özellikler:
+Bu program, kelimeleri, cümleleri veya metinleri 40-bitlik binary şifreleme algoritması sunar. Özellikler:
 
   • 40-bit binary kodlama
   • Türkçe karakter desteği (ç, ğ, ı, ö, ş, ü)
